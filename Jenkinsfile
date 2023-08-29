@@ -33,7 +33,7 @@ pipeline {
             }
             steps {
                 script {
-                    def statsFolder = "${workspaceDir}/test_git1"
+                    def statsFolder = "${workspaceDir}/test_git"
                     if (fileExists(statsFolder)) {
                         echo "Stats folder exists. Proceeding with the build..."
                         env.STATS_FOLDER_EXISTS = 'true'
