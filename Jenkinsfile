@@ -51,7 +51,7 @@ pipeline {
                     
                     dir(workspaceDir) {
                         // Clone the Git repository into the workspace
-                        checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/novablack6/gradle-simple.git']], extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: 'git_test/*']]]]])
+                        checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/novablack6/gradle-simple.git']], extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: 'test_git/*']]]]])
                         sh 'echo "Current working directory: $(pwd)"'
                     }
                 }
